@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<head>
+    <title>HoBase</title>
+    <link rel="stylesheet" href="./assets/css/main_page.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <!-- UUID library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.2.0/uuid.min.js"></script>
+</head>
+
+<body>
+    <!-- PAGE1 / MAIN PAGE AND HEADER -->
+    <div class="header">
+        <div class="header_left_side">
+            <logo>Zoobase</logo>
+        </div>
+        <form class="search_form">
+            <input class="search_input" type="text" id="search-input" placeholder="Type something ...">
+            <button id="search_button" class="header_green_button">Search</button>
+            <button id="clear_button" class="header_purple_button">Clear</button>
+        </form>
+    </div>
+
+    <ul class="tabs">
+        <li class="tab-link" data-tab="tab-1">Zoos</li>
+        <li class="tab-link" data-tab="tab-2" id="tab2-link">Create zoo</li>
+    </ul>
+
+    <div id="tab-1" class="tab-content active">
+        <div class="main_page_container">
+            <div class="sidebar">
+                <h2>Manage zoos</h2>
+                <span class="sidebar_line"></span>
+                <h3>Sort the zoos by the largest number of animals</h3>
+                <button id="sort_button" class="header_green_button">Sort</button>
+                <span class="sidebar_line"></span>
+                <h3>Count visitors per year</h3>
+                <button id="calculate_button" class="header_purple_button">Count</button>
+                <h3>Total visitors</h3>
+                <count_result id="result">0</count_result>
+            </div>
+
+            <ul id="items_container" class="ul_items_container">
+            </ul>
+        </div>
+    </div>
+
+    <div id="tab-2" class="tab-content">
+        <div id="page2" class="page2_class">
+            <form id="create_zoo" class="form_create">
+                <h1 id="form-header">Create zoo</h1>
+
+                <div id="id" hidden></div>
+                <div class="input">
+                    <label for="example_name" class="form_input">Zoo name</label>
+                    <input type="text" class="form_control" id="name_input" required>
+                </div>
+                <div class="input">
+                    <label for="example_country" class="form_input">Amount of animals</label>
+                    <input type="number" class="form_control" id="amount_of_animals_input" min="0" required>
+                </div>
+                <div class="input">
+                    <label for="example_visitors" class="form_input">Visitors per year</label>
+                    <input type="number" class="form_control" id="visitors_per_year_input" min="0" required>
+                </div>
+
+                <button id="submit_button" type="submit" class="submit_class">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <script type="module" src="./assets/js/script.js"></script>
+</body>
+
+</html>

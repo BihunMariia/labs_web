@@ -1,0 +1,107 @@
+@import "./create_zoo.css";
+@import "./header.css";
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+h3 {
+    font-weight: 300;
+}
+
+.main_page_container {
+    display: flex;
+}
+
+/* SIDEBAR STYLES */
+.sidebar {
+    margin: 0;
+    width: 320px;
+    height: 755px;
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.sidebar_line {
+    background: black;
+    width: 320px;
+    height: 1px;
+}
+
+.sidebar .header_green_button {
+    margin-bottom: 20px;
+}
+
+count_result {
+    font-size: 20px;
+    font-weight: 800;
+    color: #C576C7;
+}
+
+/* CARDS STYLES */
+ul {
+    list-style-type: none;
+}
+
+.ul_items_container {
+    width: 900px;
+    height: 755px;
+}
+
+
+.card {
+    width: 250px;
+    height: 300px;
+    background-color: #C0D5EE;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card_info {
+    width: 200px;
+    height: 150px;
+    padding: 20px;
+}
+
+.card_zoo_image {
+    width: 100px;
+    height: 80px;
+}
+
+
+/* Стилі для табів і контенту */
+.tabs {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.tab-link {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.tab-link:hover {
+    background-color: #e0e0e0;
+}
+
+.tab-content {
+    display: none;
+}
+
+/* Встановлення активної вкладки */
+.tab-content.active {
+    display: block;
+}
