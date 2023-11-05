@@ -56,6 +56,7 @@ ul {
     height: 755px;
 }
 
+
 .card {
     width: 250px;
     height: 300px;
@@ -73,4 +74,34 @@ ul {
 .card_zoo_image {
     width: 100px;
     height: 80px;
+}
+
+
+/* Стилі для табів і контенту */
+.tabs {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.tab-link {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.tab-link:hover {
+    background-color: #e0e0e0;
+}
+
+.tab-content {
+    display: none;
+}
+
+/* Встановлення активної вкладки */
+.tab-content.active {
+    display: block;
 }
